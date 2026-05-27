@@ -13,8 +13,8 @@ export default function HomePage() {
           metadata, organize into albums, and explore your collection across
           JPG, GIF, RAW, and more.
         </p>
-        <div className={styles["landing-status-badge"]}>
-          <span className={styles["landing-status-indicator"]} />
+        <div className={styles["landing-status-badge"]} role="status">
+          <span className={styles["landing-status-indicator"]} aria-hidden="true" />
           Service Online
         </div>
       </section>

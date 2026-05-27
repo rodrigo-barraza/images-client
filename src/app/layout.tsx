@@ -6,8 +6,6 @@ import {
 } from "@rodrigo-barraza/components-library";
 import SessionTrackerComponent from "@/components/SessionTrackerComponent";
 
-const AUTH_ENABLED = process.env.AUTH_ENABLED === "true";
-
 export const metadata = {
   title: "Images — Personal Image Library",
   description:
