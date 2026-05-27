@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+/* ── CSS Reset ──────────────────────────────────────────────── */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Root Variables ─────────────────────────────────────────── */
+
+:root {
+  --font-family-primary: "Inter", system-ui, -apple-system, sans-serif;
+
+  /* Spacing scale */
+  --spacing-unit-1: 4px;
+  --spacing-unit-2: 8px;
+  --spacing-unit-3: 12px;
+  --spacing-unit-4: 16px;
+  --spacing-unit-5: 20px;
+  --spacing-unit-6: 24px;
+  --spacing-unit-8: 32px;
+  --spacing-unit-10: 40px;
+  --spacing-unit-12: 48px;
+  --spacing-unit-16: 64px;
+
+  /* Border radius */
+  --border-radius-small: 6px;
+  --border-radius-medium: 10px;
+  --border-radius-large: 16px;
+  --border-radius-round: 9999px;
+
+  /* Transitions */
+  --transition-speed-fast: 150ms;
+  --transition-speed-normal: 250ms;
+  --transition-speed-slow: 400ms;
+  --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Shadows */
+  --shadow-elevation-low: 0 1px 3px oklch(0% 0 0 / 0.12), 0 1px 2px oklch(0% 0 0 / 0.08);
+  --shadow-elevation-medium: 0 4px 12px oklch(0% 0 0 / 0.15), 0 2px 4px oklch(0% 0 0 / 0.08);
+  --shadow-elevation-high: 0 12px 40px oklch(0% 0 0 / 0.2), 0 4px 12px oklch(0% 0 0 / 0.1);
+
+  /* Layout */
+  --sidebar-width: 260px;
+  --header-height: 64px;
+}
+
+/* ── Light Theme ────────────────────────────────────────────── */
+
+[data-theme="light"] {
+  --color-background-primary: oklch(0.985 0.002 250);
+  --color-background-secondary: oklch(0.97 0.004 250);
+  --color-background-tertiary: oklch(0.94 0.006 250);
+  --color-background-elevated: oklch(1 0 0);
+
+  --color-surface-primary: oklch(1 0 0);
+  --color-surface-hover: oklch(0.96 0.004 250);
+  --color-surface-active: oklch(0.93 0.006 250);
+
+  --color-text-primary: oklch(0.2 0.01 250);
+  --color-text-secondary: oklch(0.45 0.01 250);
+  --color-text-tertiary: oklch(0.6 0.008 250);
+  --color-text-inverse: oklch(0.98 0 0);
+
+  --color-border-primary: oklch(0.88 0.006 250);
+  --color-border-secondary: oklch(0.92 0.004 250);
+
+  --color-accent-primary: oklch(0.55 0.18 265);
+  --color-accent-primary-hover: oklch(0.5 0.2 265);
+  --color-accent-secondary: oklch(0.7 0.14 160);
+
+  --color-status-success: oklch(0.65 0.18 145);
+  --color-status-warning: oklch(0.75 0.18 75);
+  --color-status-error: oklch(0.6 0.22 25);
+}
+
+/* ── Dark Theme ─────────────────────────────────────────────── */
+
+[data-theme="dark"] {
+  --color-background-primary: oklch(0.13 0.01 260);
+  --color-background-secondary: oklch(0.16 0.012 260);
+  --color-background-tertiary: oklch(0.2 0.014 260);
+  --color-background-elevated: oklch(0.18 0.012 260);
+
+  --color-surface-primary: oklch(0.18 0.012 260);
+  --color-surface-hover: oklch(0.22 0.014 260);
+  --color-surface-active: oklch(0.26 0.016 260);
+
+  --color-text-primary: oklch(0.93 0.005 250);
+  --color-text-secondary: oklch(0.7 0.01 250);
+  --color-text-tertiary: oklch(0.55 0.01 250);
+  --color-text-inverse: oklch(0.15 0.01 250);
+
+  --color-border-primary: oklch(0.28 0.014 260);
+  --color-border-secondary: oklch(0.24 0.012 260);
+
+  --color-accent-primary: oklch(0.7 0.18 265);
+  --color-accent-primary-hover: oklch(0.75 0.2 265);
+  --color-accent-secondary: oklch(0.7 0.14 160);
+
+  --color-status-success: oklch(0.7 0.18 145);
+  --color-status-warning: oklch(0.8 0.18 75);
+  --color-status-error: oklch(0.65 0.22 25);
+}
+
+/* ── Base Styles ────────────────────────────────────────────── */
+
+html {
+  font-family: var(--font-family-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background-color: var(--color-background-primary);
+  color: var(--color-text-primary);
+  min-block-size: 100dvh;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+a {
+  color: var(--color-accent-primary);
+  text-decoration: none;
+  transition: color var(--transition-speed-fast) var(--transition-timing-function);
+}
+
+a:hover {
+  color: var(--color-accent-primary-hover);
+}
+
+/* ── Scrollbar ──────────────────────────────────────────────── */
+
+::-webkit-scrollbar {
+  inline-size: 8px;
+  block-size: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: oklch(0.5 0 0 / 0.3);
+  border-radius: var(--border-radius-round);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: oklch(0.5 0 0 / 0.5);
+}
+
+/* ── Utility Classes ────────────────────────────────────────── */
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
