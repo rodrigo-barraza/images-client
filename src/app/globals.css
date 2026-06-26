@@ -78,35 +78,6 @@
   --color-status-error: oklch(0.6 0.22 25);
 }
 
-/* ── Dark Theme ─────────────────────────────────────────────── */
-
-[data-theme="dark"] {
-  --color-background-primary: oklch(0.13 0.01 260);
-  --color-background-secondary: oklch(0.16 0.012 260);
-  --color-background-tertiary: oklch(0.2 0.014 260);
-  --color-background-elevated: oklch(0.18 0.012 260);
-
-  --color-surface-primary: oklch(0.18 0.012 260);
-  --color-surface-hover: oklch(0.22 0.014 260);
-  --color-surface-active: oklch(0.26 0.016 260);
-
-  --color-text-primary: oklch(0.93 0.005 250);
-  --color-text-secondary: oklch(0.7 0.01 250);
-  --color-text-tertiary: oklch(0.55 0.01 250);
-  --color-text-inverse: oklch(0.15 0.01 250);
-
-  --color-border-primary: oklch(0.28 0.014 260);
-  --color-border-secondary: oklch(0.24 0.012 260);
-
-  --color-accent-primary: oklch(0.7 0.18 265);
-  --color-accent-primary-hover: oklch(0.75 0.2 265);
-  --color-accent-secondary: oklch(0.7 0.14 160);
-
-  --color-status-success: oklch(0.7 0.18 145);
-  --color-status-warning: oklch(0.8 0.18 75);
-  --color-status-error: oklch(0.65 0.22 25);
-}
-
 /* ── Base Styles ────────────────────────────────────────────── */
 
 html {
